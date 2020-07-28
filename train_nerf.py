@@ -32,7 +32,7 @@ def main():
     # Read config file.
     cfg = None
     with open(configargs.config, "r") as f:
-        cfg_dict = yaml.load(f, Loader=yaml.FullLoader)
+        cfg_dict = yaml.load(f)
         cfg = CfgNode(cfg_dict)
 
     # # (Optional:) enable this to track autograd issues when debugging

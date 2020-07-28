@@ -59,7 +59,7 @@ def main():
     # Read config file.
     cfg = None
     with open(configargs.config, "r") as f:
-        cfg_dict = yaml.load(f, Loader=yaml.FullLoader)
+        cfg_dict = yaml.load(f)
         cfg = CfgNode(cfg_dict)
 
     images, poses, render_poses, hwf = None, None, None, None
