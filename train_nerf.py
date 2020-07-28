@@ -285,11 +285,10 @@ def main():
         writer.add_scalar("train/psnr", psnr, i)
 
         # Validation
-        # if (
-        #     i % cfg.experiment.validate_every == 0
-        #     or i == cfg.experiment.train_iters - 1
-        # ):
-        if False:
+        if (
+            i % cfg.experiment.validate_every == 0
+            or i == cfg.experiment.train_iters - 1
+        ):
             tqdm.write("[VAL] =======> Iter: " + str(i))
             model_coarse.eval()
             if model_fine:
